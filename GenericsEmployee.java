@@ -1,18 +1,18 @@
-package collections;
+package Generics;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class Employee {
+public class GenericsEmployee {
   private int empId;
 
   private String empName;
 
   private int empSal;
 
-  String empDept;
+  private String empDept;
 
-  public Employee(int empId, String empName, int empSal, String empDept) {
+  public GenericsEmployee(int empId, String empName, int empSal, String empDept) {
 
     super();
     this.empId = empId;
@@ -77,7 +77,7 @@ public class Employee {
   @Override
   public boolean equals(Object obj) {
 
-    Employee employee = (Employee) obj;
+    GenericsEmployee employee = (GenericsEmployee) obj;
     if (employee.empId == this.empId) {
       employee.setEmpName(this.empName);
       return true;
@@ -88,11 +88,11 @@ public class Employee {
 
   public static void main(String[] args) {
 
-    Set<Employee> employees = new HashSet<>();
-    employees.add(new Employee(1, "Anu", 30000, "testing"));
-    employees.add(new Employee(2, "Ansu", 45000, "Developer"));
-    employees.add(new Employee(3, "Neenu", 38000, "Testing"));
-    employees.add(new Employee(4, "Sara", 47000, "Developer"));
+    Set<GenericsEmployee> employees = new HashSet<>();
+    employees.add(new GenericsEmployee(1, "Anu", 30000, "testing"));
+    employees.add(new GenericsEmployee(2, "Ansu", 45000, "Developer"));
+    employees.add(new GenericsEmployee(3, "Neenu", 38000, "Testing"));
+    employees.add(new GenericsEmployee(4, "Sara", 47000, "Developer"));
     System.out.println(employees);
   }
 }
